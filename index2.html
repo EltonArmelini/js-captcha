@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS CAPTCHA</title>
+    <!-- CSS Bootstrap  -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS CUSTOM-->
+    <link href="assets/css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container p-5">
+
+      <form  class="m-auto p-2 bg-primary border-1 w-50 border rounded" >
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+        </div>
+        <div class="mb-3">
+          <input id="captcha" class="jCaptcha form-control" type="text" placeholder="Digite la respuesta correcta">
+        </div>
+          <button id="btn-click" type="submit" class="d-block w-100 btn btn-dark">Submit</button>
+      </form>
+
+      <div id="pop-up" class="pop-up bg-primary w-50 p-5 border rounded m-auto">
+        <i style="font-size: 3em; color:#008000;" class="d-block text-center fa-solid fa-envelope"></i>
+        <h2 class="text-light text-center" >Your message was sent successfully!</h2>
+        <button type="submit" onclick="closePopup()" class="d-block btn btn-danger m-auto" > Close </button>
+      </div>
+
+    </div>
+    <!-- FontAwasome Kit -->
+    <script src="https://kit.fontawesome.com/fc679bbf97.js" crossorigin="anonymous"></script>
+    <!-- JS bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- JS Captcha -->
+    <script src="vendor/node_modules/js-captcha/dist/js/index.min.js"></script>
+    <!-- Init JS-Captcha-->
+    <script src="app.js"></script>
+
+
+
+  </body>
+</html>
